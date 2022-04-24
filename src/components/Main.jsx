@@ -42,7 +42,7 @@ export const Main = (props) => {
         sender: wallet.getAccountId(),
       }
     );
-    await fetch('https://coin-flip-near-server.vercel.app/api/find')
+    await fetch('https://vexed-ape-server.vercel.app/api/find')
     .then(response => response.json())
     .then(data => {
       for(var i = 0; i < data.length; i++) {
@@ -215,7 +215,7 @@ export const Main = (props) => {
         "300000000000000",
       );
       //database
-      await fetch('https://coin-flip-near-server.vercel.app/api/register', {
+      await fetch('https://vexed-ape-server.vercel.app/api/register', {
           method: 'post',
           body: JSON.stringify({AccountId, depo, flip, re}),
           headers: {
