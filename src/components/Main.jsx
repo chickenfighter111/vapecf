@@ -191,7 +191,7 @@ export const Main = (props) => {
     );
   }
   const onPlay = async () => {
-    if(!flip || depo == 0) {
+    if(!flip || depo === 0) {
       alert("Please deposit fund or Select Coin");
     }
     else {
@@ -214,6 +214,8 @@ export const Main = (props) => {
         },
         "300000000000000",
       );
+      
+      console.log(re)
       //database
       await fetch('https://vexed-ape-server.vercel.app/api/register', {
           method: 'post',
@@ -299,7 +301,7 @@ export const Main = (props) => {
                         Near for
                         {" " + list[list.length - (i + 1)].flip + " "}
                         {
-                          list[list.length - (i + 1)].re=="true" ?
+                          list[list.length - (i + 1)].re === "true" ?
                           <span className = "text-success">{win1}</span> : <span className = "text-danger">{lost1}</span>
                         }
                       </li>

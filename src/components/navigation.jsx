@@ -24,7 +24,7 @@ export const Navigation = (props) => {
     const near = await connect(config);
     const wallet = new WalletConnection(near);
     wallet.requestSignIn(
-      {contractId: "flippingcoin.near", methodNames: ["deposit", "play"]},
+      {contractId: "vexedapesclubhousewallet.near", methodNames: ["deposit", "play"]},
       "Coin Flip App", // optional
       "http://localhost:3000/", // optional
       "http://localhost:3000/" // optional
