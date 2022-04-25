@@ -45,7 +45,7 @@ export const Main = (props) => {
     await fetch('https://vexed-ape-server.vercel.app/api/find')
     .then(response => response.json())
     .then(data => {
-      for(var i = 0; i < data.length; i++) {
+      for(var i = 0; i < 10; i++) {
         list.push(data[i]);
       }
     })
